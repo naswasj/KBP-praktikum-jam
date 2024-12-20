@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuk Belajar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo.png">
+  </head>
+  <body onload="renderTodoList(); updateStatistics();">
+    <header id="navbar">
+      <h1>YUK BELAJAR!!</h1>
+      <p>Waktu sekarang: <span id="current-time"></span></p>
+      <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+      <nav>
+        <button id="hamburger-menu" onclick="toggleMenu()">☰</button>
+        <div id="nav-links">
+          <a href="#" onclick="scrollToSection('timer')">Pomodoro Time</a>
+          <a href="#" onclick="scrollToSection('statistics')">Study Statistics</a>
+          <a href="#" onclick="scrollToSection('todo')">To-Do List</a>
+          <a href="#" onclick="scrollToSection('spotify')">Spotify</a>
+        </div>
+      </nav>      
+    </header>
+    <main>
+      <section id="default-content" class="default-content">
+        <h2>Selamat Datang di Yuk Belajar!</h2>
+        <p>
+          Gunakan web ini untuk membantu pengaturan waktu belajar, tugas, dan mendengarkan musik😎.
+        </p>
+        <p>Gunakan menu navigasi di atas untuk memulai!</p>
+      </section>
+      
+      <section id="timer" class="timer">
+        <h2>Pomodoro Timer</h2>
+        <label for="study-time">Study Time (minutes):</label>
+        <input type="number" id="study-time" value="25" />
+        <label for="break-time">Break Time (minutes):</label>
+        <input type="number" id="break-time" value="5" />
+        <button onclick="startPomodoro()">Start</button>
+        <button onclick="clearPomodoro()">Clear</button>
+        <h3 id="timer-display">Ready to start!</h3>
+      </section>
+
+      <section id="statistics" class="statistic">
+        <h2>Study Statistics</h2>
+        <p>Total Study Sessions: <span id="total-sessions">0</span></p>
+        <p>Total Break Sessions: <span id="total-breaks">0</span></p>
+        <p>Total Study Time: <span id="total-study-time">0</span> minutes</p>
+        <h3>Study History:</h3>
+        <ul id="study-history"></ul>
+      </section>
+
+      <section id="todo" class="todo-list">
+        <h2>To-Do List</h2>
+        <form onsubmit="event.preventDefault(); addTodo();">
+          <label for="name">Tugas:</label>
+          <input type="text" id="name" />
+          <label for="waktu">Timeline:</label>
+          <input type="datetime" id="waktu" />
+          <button type="submit">Tambah</button>
+        </form>
+        <ul id="todo-list">
+        </ul>
+      </section>
+
+    </section>
+    <section id="spotify" class="spotify">
+        <h2>Study Playlist</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5LGcqTn5nkkeZsfIKKC2uB?utm_source=generator" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

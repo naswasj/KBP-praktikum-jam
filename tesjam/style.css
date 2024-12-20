@@ -1,0 +1,385 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+/* Base Styles */
+:root {
+  --bg-color-light: #ffffff;
+  --text-color-light: #333;
+  --bg-color-dark: #121212;
+  --text-color-dark: #e0e0e0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  min-height: 100vh; /* Menjamin body memenuhi seluruh layar */
+  transition: background-color 0.3s, color 0.3s;
+  padding: 0 1rem; /* Memberikan ruang di tepi layar */
+}
+
+body.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+.theme-toggle {
+  background-color: #000000;
+  color: white;
+}
+
+.theme-toggle:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.default-content {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.default-content h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.default-content p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.default-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.default-content ul li {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: #555;
+  text-align: center;
+}
+
+header,
+main,
+section {
+  position: relative;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  width: 100vw; /* Mengisi lebar layar */
+  height: 160px;
+  position: relative;
+  z-index: 10;
+}
+
+header nav {
+  z-index: 10;
+  position: relative;
+}
+
+main {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 150px;
+}
+
+#nav-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#nav-links a {
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #000000; /* Warna teks default */
+  background-color: #f0f0f0; /* Warna latar belakang default */
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#nav-links a:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+section {
+  background: white;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  width: 100%;
+  max-width: 100%; /* Batasan lebar agar tidak terlalu besar */
+}
+
+section.active {
+  display: block; /* Menampilkan section yang aktif */
+}
+
+#timer,
+#todo,
+#statistics {
+  width: 100vw;
+  padding: 20px;
+  height: fit-content;
+}
+
+body.dark-mode section {
+  background: #1e1e1e;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+  background: #45a049;
+}
+
+button:focus {
+  outline: 2px solid #45a049;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode ul li {
+  background: #000000;
+}
+
+ul li .completed {
+  background-color: #e0e0e0;
+  opacity: 0.7;
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+ul li .task-name {
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+ul li .complete-button,
+ul li .delete-button {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+ul li .complete-button {
+  background-color: #4caf50;
+}
+
+ul li .delete-button {
+  background-color: #f44336;
+  margin-left: 10px;
+}
+
+/* Spotify Container */
+.spotify {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/18;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 12px; /* Sudut membulat untuk tampilan yang lebih baik */
+}
+
+/* Spotify Iframe */
+.spotify iframe {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: none;
+}
+
+/* Navigasi tetap di atas */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Tombol hamburger */
+#hamburger-menu {
+  display: none; /* Default: disembunyikan */
+  top: 15px; /* Jarak dari atas */
+  z-index: 1000;
+}
+
+/* Responsif Layout */
+@media (max-width: 768px) {
+  body {
+    padding: 0 2rem; /* Memberikan ruang di layar kecil */
+  }
+
+  header {
+    padding: 1rem;
+    height: 130px;
+  }
+
+  section {
+    padding: 1.5rem;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  .theme-toggle {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .theme-toggle:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  #hamburger-menu {
+    display: block; /* Tampilkan tombol hamburger */
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    position: absolute; /* Letakkan di kanan atas */
+    right: 20px;
+    z-index: 1000; /* Pastikan berada di atas elemen lainnya */
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 10;
+    gap: 20px;
+  }
+
+  #nav-links a {
+    padding: 10px;
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+
+  #nav-links a:last-child {
+    border-bottom: none; /* Hilangkan garis bawah pada link terakhir */
+  }
+
+  #nav-links.show {
+    display: flex; /* Tampilkan menu saat dibuka */
+  }
+  .spotify {
+    height: calc(100vh - 150px); /* Sesuaikan tinggi untuk layar kecil */
+  }
+  ul li .complete-button,
+  ul li .delete-button {
+    visibility: hidden; /* Sembunyikan teks asli */
+    position: relative; /* Posisi relatif untuk menampilkan ikon */
+    padding: 0.3rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ul li .complete-button::before {
+    content: "✔"; /* Ganti dengan ikon centang */
+    visibility: visible;
+    position: absolute;
+    color: #19eb06;
+  }
+
+  ul li .delete-button::before {
+    content: "✖"; /* Ganti dengan ikon silang */
+    visibility: visible;
+    position: absolute;
+    color: #ff0a0a;
+  }
+}
