@@ -8,9 +8,10 @@
 -	Ketika menekan Study Statistic, maka tampilannya akan terdapat total break session yaitu total sessions yang telah dilakukan dari pertama kali menggunakan web dan juga total study time (berapa lama waktu belajar yang dilakukan pada hari itu), dan juga study history (untuk melihat Riwayat belajar yang telah dilakukan pada tenggal tersebut).
 -	Saat menekan To-Do List, yaitu dapat menambah kan tugas dan juga time line secara mandiri. Setelah tugas selesai dapat menekan tombol complete. Jika tugas ingin dihapus dapat menekan tombol delete.
 -	Saat menekan Spotify. Dalam gambar terlihat tampilan spotify dari akun spotify milik saya sendiri.
-NOTE: saya memilih tema warna hijau, karena warna hijau merupakan warna kesukaan Nabi💚🙏
 
 # Untuk Tampilan di HP
 - yang berubah hanya tombol navigasi nya saja yaitu di rangkap menjadi tombol hamburger
 - untuk To-Do List nya berubah tombol complete dan delete nya masing-masing menjadi ✔️ dan ❌
 - selebihnya untuk tampilan di layar yang lebih kecil semuanya sama seperti dilayar yang lebih besar(laptop).
+
+# NOTE: saya memilih tema warna hijau, karena warna hijau merupakan warna kesukaan Nabi💚🙏
