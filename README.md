@@ -1,4 +1,4 @@
-MEMBUAT WEB POMODORO TIMER & TO-DO LIST DENGAN NAMA WEB "YUK BELAJAR"
+# MEMBUAT WEB POMODORO TIMER & TO-DO LIST DENGAN NAMA WEB "YUK BELAJAR"
 -	Tampilan pertama saat di jalankan kode nya pada web browser, terdapat notifikasi yaitu permohonan izin untuk menampilkan notifikasi yang akan ditampilkan saat waktu belajar berakhir atau saat waktu istirahat berakhir
 -	Saat menekan pomodoro time akan ada tampilan untuk waktu study time dan break timenya sudah ditetapkan dari pertama masuk web, yaitu masing-masing 25 & 5 menit sesuai waktu pomodoro time. Tetapi untuk waktunya masih dapat di ubah oleh pengguna.
 -	Saat waktu belajar berakhir, maka akan terdapat notifikasi yang muncul dan suara alarm yang berbunyi.
