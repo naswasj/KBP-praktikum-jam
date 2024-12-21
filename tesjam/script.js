@@ -20,7 +20,7 @@ function updateCurrentTime() {
 setInterval(updateCurrentTime, 1000);
 
 // Menampilkan waktu saat halaman pertama kali dimuat
-document.addEventListener("DOMContentLoaded", updateCurrentTime)
+document.addEventListener("DOMContentLoaded", updateCurrentTime);
 
 // Fungsi untuk menampilkan section yang dipilih dan menyembunyikan yang lain
 function scrollToSection(sectionId) {
