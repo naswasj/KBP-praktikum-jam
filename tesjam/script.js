@@ -22,9 +22,6 @@ setInterval(updateCurrentTime, 1000);
 // Menampilkan waktu saat halaman pertama kali dimuat
 document.addEventListener("DOMContentLoaded", updateCurrentTime);
 
-// Menyertakan Spotify iframe
-let spotifyIframe = document.querySelector(".spotify iframe");
-
 // Fungsi untuk menampilkan section yang dipilih dan menyembunyikan yang lain
 function scrollToSection(sectionId) {
   // Sembunyikan semua section
